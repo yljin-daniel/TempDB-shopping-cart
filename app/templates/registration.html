@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block title %}
+User Registration
+{% endblock %}
+{% block header %}
+User Registration
+{% endblock %}
+{% block body %}
+
+<ul>
+    {% for field, errors in form.errors.items() %}
+        {% for message in errors %}
+             <li class="error">{{ message }}</li>
+        {% endfor %}
+    {% endfor %}
+</ul>
+
+<form action = "/register" method = post>
+    {{ form.csrf_token }}
+    <table width="50%" border="0" align="center">
+      <tbody>
+        <tr>
+          <td class="label">{{ form.username.label }}</td>
+          <td>{{ form.username }}</td>
+        </tr>
+        <tr>
+          <td class="label">{{ form.password.label }}</td>
+          <td>{{ form.password }}</td>
+        </tr>
+        <tr>
+          <td class="label">{{ form.password2.label }}</td>
+          <td>{{ form.password2 }}</td>
+        </tr>
+        <tr>
+          <td class="label">{{ form.email.label }}</td>
+          <td>{{ form.email }}</td>
+        </tr>
+        <tr>
+          <td class="label">{{ form.phone.label }}</td>
+          <td>{{ form.phone }}</td>
+        </tr>
+        <tr>
+          <td class="label">{{ form.address.label }}</td>
+          <td>{{ form.address }}</td>
+        </tr>
+        <tr align="center">
+          <td colspan="2">
+              <a href="/cart">
+                  <input type="submit">
+              </a>
+
+            <input type="reset">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+</form>
+{% endblock %}

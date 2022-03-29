@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Online Shopping System-{% block title %}{% endblock %}</title>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/book.css') }}">
+</head>
+
+<body>
+<!-- 页面头部信息 -->
+<div id="header">
+    <img src="{{ url_for('static', filename = 'images/book_img2.jpg') }}" width="20px" height="20px">
+    {% block header %}{% endblock %}
+    <hr/>
+</div>
+<!-- 页面内容信息 -->
+<div id="content">
+    {% block body %}
+    {% endblock %}
+</div>
+<!-- 页面底部信息 -->
+<div id="footer">
+  <hr/>
+  All Rights Reserved 
+</div>
+
+</body>
+</html>

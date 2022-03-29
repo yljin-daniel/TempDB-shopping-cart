@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>shoppingCart</title>
+</head>
+<body>
+
+    <h1>Cart</h1>
+    <hr/>
+    <ul>
+        {% for item in data %}
+        <li>{{item.name}}</li>
+        {% endfor %}
+    </ul>
+    <li><a href="/checkout">确认购买</a></li>
+</body>
+</html>
