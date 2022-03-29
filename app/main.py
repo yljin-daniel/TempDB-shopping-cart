@@ -62,6 +62,7 @@ def login():
             if c is not None and c.password == form.password.data:
                 print('Login Success')
                 customer = {}
+                customer['id'] = c.id
                 customer['name'] = c.name
                 customer['password'] = c.password
                 customer['address'] = c.address
@@ -80,15 +81,16 @@ def login():
 def register():
     form = RegistrationForm(request.form)
     if request.method == 'POST' and form.validate():
-
-        userN = form.username
-        pas = form.password
-        Email = form.email
-        phoneNumber = form.phone
-        addr = form.address
-        tempUser = User(username = userN, password = pas, email = Email, phone = phoneNumber, address = addr)
+        uid=form.userid.data
+        userN = form.username.data
+        pas = form.password.data
+        Email = form.email.data
+        phoneNumber = form.phone.data
+        addr = form.address.data
+        tempUser = User(id=uid, name = userN, password = pas, email = Email,  address = addr, phone = phoneNumber)
         db.session.add(tempUser)
-        return render_template('login.html')
+        db.session.commit()
+        return render_template('login.html', form=form)
     return render_template('registration.html', form = form)
 
 @app.route('/main')

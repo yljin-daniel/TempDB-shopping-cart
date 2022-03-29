@@ -2,24 +2,34 @@
 {% block title %}User LogIn{% endblock %}
 {% block header %}User LogIn{% endblock %}
 {% block body %}
-<form action = "/login" method = "POST">
-  <table width="40%" border="0" align="center">
-    <tbody>
-      <tr>
-        <td>User ID:</td>
-        <td><input name="userid" type="text"/></td>
+
+<ul>
+  {% for field, errors in form.errors.items() %}
+      {% for message in errors %}
+          <li class="error">{{ message }}</li>
+      {% endfor %}
+  {% endfor %}
+</ul>
+
+<form action="/login" method="post">
+  {{ form.csrf_token }}
+  <table width="100%" align="center">
+      <tr height="40">
+          <td colspan="2" align="center"><strong>Please Log In</strong></td>
       </tr>
-      <tr>
-        <td>Passwords:</td>
-        <td><input name="userpwd" type="password"/></td>
+      <tr height="40">
+          <td width="50%" align="right">{{ form.userid.label }}</td>
+          <td>{{ form.userid }}</td>
       </tr>
-      <tr align="center">
-        <td colspan="2">
-          <input type="submit" value="Login">
-          <input type="reset" value="Register">
-        </td>
+      <tr height="40">
+          <td width="50%" align="right">{{ form.password.label }}</td>
+          <td>{{ form.password }}</td>
       </tr>
-    </tbody>
+      <tr height="40">
+          <td align="right">&nbsp;</td>
+          <td><input type="image" src="{{ url_for('static', filename='images/login-button.jpg') }}" onclick="document.forms[0].fn.value='login'"/>
+              &nbsp;&nbsp;&nbsp;&nbsp; <a href="/register"><img src="{{ url_for('static', filename='images/reg-button.jpg') }}" border="0"/></a></td>
+      </tr>
   </table>
 </form>
 {% endblock %}

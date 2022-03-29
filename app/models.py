@@ -6,12 +6,13 @@ Base = declarative_base()
 
 
 class User(Base):
-    __tablename__ = 'users'
-    name = Column('username', String(100), primary_key=True)
+    __tablename__ = 'user'
+    id = Column('user_id', String(20), primary_key=True)
+    name = Column('name', String(100))
     password = Column('password', String(100))
-    email = Column('email', String(50))
+    email = Column('email', String(100))
     address = Column('address', String(100))
-    phone = Column('phone', String(20))
+    phone = Column('phone_number', String(20))
 
 class cart(Base):
     __tablename__='cart' # 表名

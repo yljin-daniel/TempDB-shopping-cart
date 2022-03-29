@@ -3,6 +3,7 @@ from wtforms import StringField, PasswordField, validators
 
 
 class RegistrationForm(Form):
+    userid = StringField('User ID:', [validators.DataRequired('type ID')])
     username = StringField('Username:', [validators.DataRequired('type username')])
     password = PasswordField('Password:', [validators.DataRequired('type password')])
     password2 = PasswordField('Repeat Password:', [validators.EqualTo('password', message='Password not match')])
@@ -12,5 +13,5 @@ class RegistrationForm(Form):
 
 class LoginForm(Form):
 
-    userid = StringField('User ID:', [validators.InputRequired('Username required')])
+    userid = StringField('User ID:', [validators.InputRequired('Userid required')])
     password = PasswordField('Password:', [validators.InputRequired('Password required')])

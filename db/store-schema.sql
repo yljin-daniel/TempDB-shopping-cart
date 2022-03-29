@@ -17,8 +17,8 @@ CREATE TABLE item_group (item_group_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NUL
 
 
 -- Table: order
-DROP TABLE IF EXISTS "order";
-CREATE TABLE "order" (order_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, user_id INTEGER NOT NULL, item_id INTEGER NOT NULL, order_date TEXT NOT NULL, final_price REAL NOT NULL);
+DROP TABLE IF EXISTS orders;
+CREATE TABLE orders (order_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, user_id INTEGER NOT NULL, item_id INTEGER NOT NULL, order_date TEXT NOT NULL, final_price REAL NOT NULL);
 
 -- Table: shopping_cart
 DROP TABLE IF EXISTS shopping_cart;
@@ -26,7 +26,15 @@ CREATE TABLE shopping_cart (cart_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, 
 
 -- Table: user
 DROP TABLE IF EXISTS user;
-CREATE TABLE user (user_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, name TEXT NOT NULL, password VARCHAR NOT NULL, phone_number TEXT, email TEXT, address TEXT);
+create table user
+(
+   user_id              varchar(20) primary key,
+   name                 varchar(100) not null,
+   password             varchar(100) not null,
+   address              varchar(100),
+   phone_number         varchar(20),
+   email                varchar(100)
+);
 
 COMMIT TRANSACTION;
 PRAGMA foreign_keys = on;
