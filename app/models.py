@@ -15,9 +15,9 @@ class User(Base):
     phone = Column('phone_number', String(20))
 
 class cart(Base):
-    __tablename__='cart' # 表名
-    id=Column(Integer, primary_key=True)
-    name=Column(String(64), unique=False)
+    __tablename__='shopping_cart' # 表名
+    id=Column('cart_id', Integer, primary_key=True)
+    user_id=Column('user_id', String(64), unique=False)
 
 class information(Base):
     __tablename__ = 'information'  # 表名

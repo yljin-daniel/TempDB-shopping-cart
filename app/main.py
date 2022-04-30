@@ -38,7 +38,7 @@ def productList():  # 产品列表
 
 @app.route('/cart', methods=['GET', 'POST'])
 def cart_view():  # 购物车页面
-    list = cart.query.all()  # 展示购物车数据库
+    list = db.session.query(cart).all()  # 展示购物车数据库
     return render_template("cart.html", data = list)  # 把购物车数据库传入前端
 
 @app.route('/checkout', methods=['GET', 'POST'])
