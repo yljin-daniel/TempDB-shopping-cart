@@ -8,7 +8,7 @@
             "name": "Python: Current File",
             "type": "python",
             "request": "launch",
-            "program": "C:/Users/kingd/OneDrive - purdue.edu/348 Group Project/TempDB-shopping-cart/manager.py",
+            "program": "manager.py",
             "args": ["runserver"],
             "console": "integratedTerminal",
             "justMyCode": true
