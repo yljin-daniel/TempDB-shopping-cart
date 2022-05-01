@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/public.css') }}">
+</head>
+
+<body>
+
+
+{% with messages = get_flashed_messages() %}
+ {% if messages %}
+    <ul>
+       {% for message in messages %}
+       <li class="success">{{ message }}</li>
+       {% endfor %}
+    </ul>
+ {% endif %}
+{% endwith %}
+
+
+{% block body %}{% endblock %}
+
+<div class="footer">
+    <hr width="100%"/>
+    Copyright © TempDB 2022. All Rights Reserved
+</div>
+</body>
+</html>

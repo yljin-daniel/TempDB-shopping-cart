@@ -3,26 +3,26 @@
 <head>
 <meta charset="utf-8">
 <title>{% block title %}{% endblock %}</title>
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/public.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/public.css') }}">
 </head>
 
 <body>
 <div class="header">Online Shopping Platform</div>
 <hr width="100%" />
 
-<ul>
+
 {% with messages = get_flashed_messages() %}
-{% if messages %}
+ {% if messages %}
+    <ul>
        {% for message in messages %}
        <li class="error">{{ message }}</li>
        {% endfor %}
-{% endif %}
+    </ul>
+ {% endif %}
 {% endwith %}
-</ul>
 
 
-{% block body %}
-{% endblock %}
+{% block body %}{% endblock %}
 <div class="footer">
   <hr  width="100%" />
   Copyright © TempDB 2022. All Rights Reserved </div>

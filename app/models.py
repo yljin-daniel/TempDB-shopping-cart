@@ -1,29 +1,55 @@
-from sqlalchemy import Column, String, Integer
+from sqlalchemy import Column, ForeignKey, String, Integer, Float
 from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
 
-
-class User(Base):
-    __tablename__ = 'user'
-    id = Column('user_id', String(20), primary_key=True)
-    name = Column('name', String(100))
-    password = Column('password', String(100))
-    email = Column('email', String(100))
+class Customer(Base):
+    __tablename__ = 'customers'
+    id = Column('id', String(20), primary_key=True)
+    name = Column('name', String(50), nullable=False)
+    password = Column('password', String(20), nullable=False)
     address = Column('address', String(100))
-    phone = Column('phone_number', String(20))
+    phone = Column('phone', String(20))
+    birthday = Column('birthday', String(20))
 
-class cart(Base):
-    __tablename__='shopping_cart' # 表名
-    id=Column('cart_id', Integer, primary_key=True)
-    user_id=Column('user_id', String(64), unique=False)
 
-class information(Base):
-    __tablename__ = 'information'  # 表名
-    id = Column(Integer, primary_key=True, autoincrement=True)
-    firstName = Column(String(64), unique=False)
-    lastName = Column(String(64), unique=False)
-    payment = Column(String(64), unique=False)
-    itemName = Column(String(64), primary_key=False)
+class Goods(Base):
+    __tablename__ = 'goods'
+    id = Column('id', Integer, primary_key=True)
+    name = Column('name', String(100), nullable=False)
+    price = Column('price', Float)
+    description = Column('description', String(200))
+    brand = Column('brand', String(30))
+    cpubrand = Column('cpu_brand', String(30))
+    cputype = Column('cpu_type', String(30))
+    memorycapacity = Column('memory_capacity', String(30))
+    hdcapacity = Column('hd_capacity', String(30))
+    cardmodel = Column('card_model', String(30))
+    displaysize = Column('displaysize', String(30))
+    image = Column('image', String(100))
+    # One to many（Goods->OrderLineItem）
+    orderLineItems = relationship('OrderLineItem')  
 
+
+class Orders(Base):
+    __tablename__ = 'orders'
+    id = Column('id', String(20), primary_key=True)
+    orderdate = Column('order_date', String(20))
+    status = Column('status', Integer)  
+    total = Column('total', Float)
+    # One to Many（Orders->OrderLineItem）
+    orderLineItems = relationship('OrderLineItem')  
+
+
+class OrderLineItem(Base):
+    __tablename__ = 'orderLineItems'
+    id = Column('id', Integer, primary_key=True)
+    quantity = Column('quantity', Integer)
+    subtotal = Column('sub_total', Float)
+    goodsid = Column('goodsid', ForeignKey('goods.id'))  
+    orderid = Column('orderid', ForeignKey('orders.id')) 
+    # Many to one（OrderLineItem->Orders），reverse ref
+    orders = relationship('Orders', backref='OrderLineItem') 
+    # Many to ONe（OrderLineItem->Goods），reverse ref
+    goods = relationship('Goods', backref='OrderLineItem') 
