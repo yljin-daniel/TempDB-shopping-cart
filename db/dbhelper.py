@@ -1,7 +1,6 @@
 import sqlite3
 
-DB_FILES = './db/shopping.db'
-
+DB_FILES = './db/database.db'
 
 
 def create_tables():
@@ -11,9 +10,9 @@ def create_tables():
         conn = sqlite3.connect(DB_FILES)
         try:
             conn.executescript(sql)
-            print('Database Initialization success')
+            print('数据库初始化成功')
         except Exception as e:
-            print('Database Initialization Failed')
+            print('数据库初始化失败')
             print(e)
         finally:
             conn.close()
@@ -26,9 +25,9 @@ def load_data():
         conn = sqlite3.connect(DB_FILES)
         try:
             conn.executescript(sql)
-            print('Dataloading success')
+            print('数据库插入成功')
         except Exception as e:
-            print('Dataloading failed')
+            print('数据库插入失败')
             print(e)
         finally:
             conn.close()

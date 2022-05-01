@@ -1,40 +1,55 @@
---
--- File generated with SQLiteStudio v3.3.3 on Mon Mar 28 18:40:59 2022
---
--- Text encoding used: System
---
-PRAGMA foreign_keys = off;
-BEGIN TRANSACTION;
 
--- Table: item
-DROP TABLE IF EXISTS item;
-CREATE TABLE item (item_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, item_group_id INTEGER NOT NULL, name TEXT NOT NULL, description TEXT, price REAL NOT NULL);
+drop table if exists Customers;
+
+drop table if exists OrderLineItems;
+
+drop table if exists Goods;
+
+drop table if exists Orders;
 
 
--- Table: item_group
-DROP TABLE IF EXISTS item_group;
-CREATE TABLE item_group (item_group_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, item_group_name TEXT NOT NULL, description TEXT);
-
-
--- Table: order
-DROP TABLE IF EXISTS orders;
-CREATE TABLE orders (order_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, user_id INTEGER NOT NULL, item_id INTEGER NOT NULL, order_date TEXT NOT NULL, final_price REAL NOT NULL);
-
--- Table: shopping_cart
-DROP TABLE IF EXISTS shopping_cart;
-CREATE TABLE shopping_cart (cart_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, user_id INTEGER NOT NULL, item_id INTEGER NOT NULL, item_quantity INTEGER NOT NULL);
-
--- Table: user
-DROP TABLE IF EXISTS user;
-create table user
+create table Customers
 (
-   user_id              varchar(20) primary key,
-   name                 varchar(100) not null,
-   password             varchar(100) not null,
+   id                  varchar(20) primary key,
+   name                 varchar(50) not null,
+   password             varchar(20) not null,
    address              varchar(100),
-   phone_number         varchar(20),
-   email                varchar(100)
+   phone                varchar(20),
+   birthday             varchar(20)
 );
 
-COMMIT TRANSACTION;
-PRAGMA foreign_keys = on;
+
+create table Goods
+(
+   id                  integer  primary key autoincrement,
+   name                varchar(100) not null,
+   price                float,
+   description          varchar(200),
+   brand                varchar(30),
+   cpu_brand            varchar(30),
+   cpu_type             varchar(30),
+   memory_capacity      varchar(30),
+   hd_capacity          varchar(30),
+   card_model           varchar(30),
+   displaysize          varchar(30),
+   image                varchar(100)
+);
+
+
+create table Orders
+(
+   id                   varchar(20) primary key,
+   order_date           varchar(20),
+   status               integer default 1,
+   total                float
+);
+
+
+create table OrderLineItems
+(
+   id                   integer primary key autoincrement,
+   goodsid              integer not null references Goods(id),
+   orderid              integer not null references Orders(id) ,
+   quantity             integer,
+   sub_total            float
+);

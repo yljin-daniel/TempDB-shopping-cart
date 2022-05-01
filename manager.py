@@ -1,6 +1,6 @@
 from flask_script import Manager
 
-from app.main import app
+from app.views import app
 from db import dbhelper
 
 manager = Manager(app)

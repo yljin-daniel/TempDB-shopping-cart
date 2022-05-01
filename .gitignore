@@ -1,2 +1,4 @@
 .vscode
 .venv
+db/store-dataload.sql
+__pycache__
