@@ -61,13 +61,43 @@
 
 <table width="100%" border="0" align="center">
     <tr>
-        <td width="616"><img src="{{ url_for('static', filename='images/mycar.jpg') }}"/></td>
+        <td width="616">My Cart</td>
         {% include 'goods_header.html' %}
     </tr>
 </table>
 <hr width="100%"/>
 <div class="text3" align="center">Items to be purchased</div>
-<br>
+{%if total == 0.0%}
+<form action="/cart">
+    <table width="100%" border="0" align="center" class="threeboder">
+        <tr bgcolor="#A5D3FF">
+            <td height="50" align="center" class="theader">Name</td>
+            <td width="8%" align="center" class="theader">Qty</td>
+            <td width="15%" align="center" class="theader">Price</td>
+            <td width="15%" align="center" class="theader">Total</td>
+        </tr>
+        {% for item in list %}
+        <tr>
+            <td height="50" align="left" class="trow">{{ item[1] }}</td>
+            <td align="center" class="trow">
+                <input name="quantity_{{ item[0] }}" type="text" value="{{ item[3] }}"
+                       onblur="calc({{ item[0] }}, this)"/>
+            </td>
+            <td align="center" class="trow">&yen;<span id="price_{{ item[0] }}">{{ item[2] }}</span></td>
+            <td align="center" class="trow">&yen;<span id="subtotal_{{ item[0] }}">{{ item[4] }}</span>
+            </td>
+        </tr>
+        {% endfor %}
+        <tr>
+            <td height="50" colspan="5" align="right">Final Amount: $<span id="total">{{ total }}</span>&nbsp;&nbsp;</td>
+        </tr>
+    </table>
+    <br>
+    <div align="center">
+        <input type="submit" value="Submit" />&nbsp;&nbsp;
+    </div>
+</form>
+{%else%}
 <form action="/submit_order" method="post">
     <table width="100%" border="0" align="center" class="threeboder">
         <tr bgcolor="#A5D3FF">
@@ -94,7 +124,8 @@
     </table>
     <br>
     <div align="center">
-        <input type="image" src="{{ url_for('static', filename='images/submit_order.jpg') }}" />&nbsp;&nbsp;
+        <input type="submit" value="Submit" />&nbsp;&nbsp;
     </div>
 </form>
+{%endif%}
 {% endblock %}
