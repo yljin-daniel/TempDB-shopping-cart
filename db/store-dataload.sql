@@ -58,7 +58,18 @@ insert into Goods values (5,
   'GeForce RTX 2070',
   '15.6 Inches',
   'https://images-na.ssl-images-amazon.com/images/I/61LxsrqX69S.__AC_SY300_SX300_QL70_ML2_.jpg');
-insert into Goods values (6,'宏碁SQX4650 140N',2099,'宏碁(Acer) 商祺SQX4650 140N 台式商用电脑整机（G3930 4G 1T 集显 win10 键鼠 三年上门）19.5英寸 ','宏碁（acer） ','Intel','Intel奔腾 赛扬','4G','1T','','18.5-19.5英寸','5b0fd9dbNeadc1b8d.jpg');
+insert into Goods values (6,
+  'HP Laptop',
+  1229.0,
+  '[Windows 11] HP 17 Laptop Computer, 17.3" FHD Anti-Glare 300nits, Intel Quad-Core i5-1135G7 up to 4.2GHz (Beat i7-1065G7), 64GB DDR4 RAM, 2TB PCIe SSD, 802.11AC WiFi, Bluetooth 4.2, 64GB Flash Drive',
+  'HP',
+  'Intel',
+  'Core i7',
+  '64 GB',
+  '2 TB',
+  'Intel Iris Xe Graphics',
+  '17.3 Inches',
+  'https://images-na.ssl-images-amazon.com/images/I/71QQCgjbfmL.__AC_SX300_SY300_QL70_ML2_.jpg');
 insert into Goods values (7,
   'Pavilion-14m-1013d',
   569.0,
@@ -71,9 +82,42 @@ insert into Goods values (7,
   'Intel',
   '14 Inches',
   'https://images-na.ssl-images-amazon.com/images/I/811dtC6rQrL.__AC_SY300_SX300_QL70_ML2_.jpg');
-insert into Goods values (8,'海尔天越Y3',1888,'海尔（Haier）天越Y3 商用台式办公电脑整机(Intel四核J3160 4G 500G 键鼠 WIFI 正版Win10)20.7英寸','海尔（Haier） ','Intel','Intel奔腾 赛扬','4G','','','20-20.7英寸','5b31a164Nb58f4bee.jpg');
-insert into Goods values (9,'清华同方精锐S710',2099,'清华同方(THTF)精锐S710商用办公电脑整机(八代G4900 4G 1T 内置wifi win10）19.5英寸','清华同方（THTF） ','Intel','Intel奔腾 赛扬','4G','1T','','18.5-19.5英寸','5b431c4bN240eba11.jpg');
-insert into Goods values (10,'惠普690-076ccn',6488,'惠普（HP）光影精灵II代 吃鸡游戏台式电脑主机(八代i7-8700 高频8G 128GSSD+1TB GTX1060 6G独显 WiFi蓝牙) ','惠普（HP） ','Intel ','Intel i7','8G','','GTX1060 3G/6G','','5ae14568N12a4a954.jpg');
+insert into Goods values (8,
+  'LG gram',
+  1559.79,
+  "LG gram 16'' 2-in-1 Ultra-Lightweight Laptop, WQXGA(2560 x 1600) IPS 16:10 TouchDisplay, Intel Evo Core i7-1165G7, Wi-Fi 6, 21 hr BatteryLife, Thunderbolt4, Stylus Pen, Win 11（16GB RAM | 1TB PCIe SSD）",
+  'LG',
+  'Intel',
+  'Core i7 Family',
+  '16 GB',
+  '1 TB',
+  '4.7 GHz',
+  '16 Inches',
+  'https://images-na.ssl-images-amazon.com/images/I/41LW-rk8EWL.__AC_SX300_SY300_QL70_ML2_.jpg');
+insert into Goods values (9,
+  'LG gram',
+  1559.79,
+  "LG gram 16'' 2-in-1 Ultra-Lightweight Laptop, WQXGA(2560 x 1600) IPS 16:10 TouchDisplay, Intel Evo Core i7-1165G7, Wi-Fi 6, 21 hr BatteryLife, Thunderbolt4, Stylus Pen, Win 11（16GB RAM | 1TB PCIe SSD）",
+  'LG',
+  'Intel',
+  'Core i7 Family',
+  '16 GB',
+  '1 TB',
+  '4.7 GHz',
+  '16 Inches',
+  'https://images-na.ssl-images-amazon.com/images/I/41LW-rk8EWL.__AC_SX300_SY300_QL70_ML2_.jpg');
+insert into Goods values (10,
+  'PH315-54-760S',
+  1233.78,
+  'Acer Predator Helios 300 PH315-54-760S Gaming Laptop | Intel i7-11800H | NVIDIA GeForce RTX 3060 Laptop GPU | 15.6" Full HD 144Hz 3ms IPS Display | 16GB DDR4 | 512GB SSD | Killer WiFi 6 | RGB Keyboard',
+  'Acer',
+  'Intel',
+  'Core i7',
+  '16 GB',
+  '512 GB',
+  'NVIDIA GeForce RTX 3060',
+  '15.6 Inches',
+  'https://images-na.ssl-images-amazon.com/images/I/71nz3cIcFOL.__AC_SY300_SX300_QL70_ML2_.jpg');
 insert into Goods values (11,
   'Dell G15 5515 RE Gaming Laptop',
   1019.0,
@@ -110,8 +154,30 @@ insert into Goods values (13,
   'Intel',
   '15.6 Inches',
   'https://images-na.ssl-images-amazon.com/images/I/61wYw4cc3sL.__AC_SX300_SY300_QL70_ML2_.jpg');
-insert into Goods values (14,'戴尔Inspiron 3670-R1847S',5299,'戴尔(DELL)灵越3670高性能台式电脑整机(八代i5-8400 8G 1T 2G独显 Win10 有线键鼠 三年上门)23.6英寸 ','戴尔（DELL） ','Intel ','Intel i5','8G','1T','','23-24英寸','5ae0031cN51fcf335.jpg');
-insert into Goods values (15,'亚当贝尔 酷睿i5-8400/i7',1650,'亚当贝尔 酷睿i5-8400/i7独显GTX1060家用商务办公游戏吃鸡台式电脑主机整机全 单主机 套餐一（酷睿I5+8G+GTX750独显） ','亚当贝尔 ','Intel ','Intel i5','8G','','GTX 9系/7系','','57d3998bNed48e1f1.jpg');
+insert into Goods values (14,
+  '15Z95P-P.ADB9U1',
+  1596.99,
+  'LG Gram 15Z95P Laptop 15.6" Ultra-Lightweight, IPS, FHD (1920 x 1080), Intel CORE i7, 32GB RAM, 1TB SSD, Windows 11 Home, 80Wh Battery, Alexa Built-in, 2X USB-C, HDMI, USB-A – Black',
+  'LG',
+  'Intel',
+  'Core i7 Family',
+  '32 GB',
+  '1 TB',
+  '5 GHz',
+  '15.6 Inches',
+  'https://images-na.ssl-images-amazon.com/images/I/71bAPTjA2iL.__AC_SX300_SY300_QL70_ML2_.jpg');
+insert into Goods values (15,
+  '17Z95P-K.AAS9U1',
+  1596.99,
+  'LG Gram 17Z95P Laptop 17" Ultra-Lightweight, IPS, (2560 x 1600), Intel Evo 11th gen CORE i7 , 16GB RAM, 2TB SSD, Windows 11 Home, 80Wh Battery, Alexa Built-in, 2X USB-C, HDMI, USB-A – Silver',
+  'LG',
+  'Intel',
+  'Core i7 Family',
+  '16 GB',
+  '2 TB',
+  '5 GHz',
+  '17 Inches',
+  'https://images-na.ssl-images-amazon.com/images/I/71PpQ58i9pL.__AC_SX300_SY300_QL70_ML2_.jpg');
 insert into Goods values (16,
   'ASUS Rog Strix',
   3199.99,
@@ -136,8 +202,30 @@ insert into Goods values (17,
   'NVIDIA GeForce RTX 3080',
   '15.6 Inches',
   'https://images-na.ssl-images-amazon.com/images/I/71w5kipQpgL.__AC_SX300_SY300_QL70_ML2_.jpg');
-insert into Goods values (18,'机械革命MR LX900-600',9999,'机械革命(MECHREVO)MR LX900吃鸡游戏台式电脑主机(i7-8700K 16G 128GSSD+1T GTX1070*8G独显） ','机械革命（MECHREVO）','Intel ','Intel i7','16G','','','GTX1070 8G','5b03e639N695b29a5.jpg');
-insert into Goods values (19,'亚当贝尔 四核/酷睿I5/i7级六核独显',1399,'亚当贝尔 四核/酷睿I5/i7级六核独显GTX1060可选家用办公游戏吃鸡台式机电脑主机 电脑主机+19英寸显示器 配置一 英特尔四核+4G内存+128固态 ','亚当贝尔 ','Intel','Intel奔腾 赛扬','4G','','','18.5-19.5英寸','58c8fd52N19cbf7dd.jpg');
+insert into Goods values ((18,
+  'HP Notebook',
+  1309.0,
+  'Newest HP Notebook, 15.6" Full HD Touchscreen, Intel Core i7-1165G7, 64GB RAM, 2TB PCIe SSD, Backlit Keyboard, Fingerprint Reader, Webcam, WiFi 5, HDMI, Type-C, Bluetooth, Windows 11 Home, Silver',
+  'HP',
+  'AMD',
+  'Intel Core i7',
+  '64 GB',
+  '128 GB',
+  '2.8 GHz',
+  '15.6 Inches',
+  'https://images-na.ssl-images-amazon.com/images/I/61gUUDRMHTL.__AC_SX300_SY300_QL70_ML2_.jpg');
+insert into Goods values (19,
+  '16T90P-K.AAG7U1',
+  1346.99,
+  'LG Gram 16T90P 16" WQXGA (2560 x 1600) 2-in-1 Lightweight Touch Display Laptop, Intel Evo 11th Gen Core i5 , 16GB RAM, 512GB SSD, 21 Hour Battery, Alexa Built-in, 2X USB-C, HDMI, USB- Green',
+  'LG',
+  'Intel',
+  'Core i7 Family',
+  '16 GB',
+  '512 GB',
+  '4.7 GHz',
+  '16 Inches',
+  'https://images-na.ssl-images-amazon.com/images/I/71I2taLROlS.__AC_SX300_SY300_QL70_ML2_.jpg');
 insert into Goods values (20,
   'Omen 15z',
   1969.99,
@@ -174,15 +262,27 @@ insert into Goods values (22,
   '2.8 Hz',
   '14 Inches',
   'https://images-na.ssl-images-amazon.com/images/I/61zSKlPmKsL.__AC_SX300_SY300_QL70_ML2_.jpg');
-insert into Goods values (23,'戴尔（DELL） Optiplex3050MT ',2699,'戴尔（DELL） Optiplex3050MT 办公台式电脑主机 商用台式机办公电脑整机全套 带21.5英寸显示器 E2216HV G3930 4G 500G 标机 ','戴尔（DELL） ','Intel','Intel奔腾 赛扬','4G','500G','','','5b5a85b7Naf67e3e1.jpg');
-insert into Goods values (24,'宏碁SQX4650 746N',4099,'宏碁(Acer) 商祺SQX4650 746N台式商用电脑整机(i5-7400 4G 1T GT720 2G win10 Wifi 键鼠 三年上门)21.5英寸 ',' 宏碁（acer） ','Intel ','Intel i5','4G','1T','GTX 9系/7系','：21.5英寸','5a672fbaN7fdae887.jpg');
-insert into Goods values (25,'梵泰（FOTEN） 英特尔',1399,'梵泰（FOTEN） 英特尔四核办公家用台式电脑整机 主机+21.5显示器 【特价】四核+2G内存+60G固态硬盘 ','梵泰（FOTEN） ','Intel','Intel奔腾 赛扬','','1T','','21.5英寸','5afcf52dN88b989ea.jpg');
-insert into Goods values (26,'AOC215A73440',2098,'AOC AIO734 21.5英寸超薄高清一体机台式电脑(升级Intel四核J3160 4G 120G固态 内置WiFi 三年质保 送键鼠) ','AOC ','Intel','Intel奔腾 赛扬','4G','','','20-21.5英寸','5b4701a1Ncb117214.jpg');
-insert into Goods values (27,'七喜悦祺H10-4A41T',1798,'七喜（HEDY）N20商用办公台式迷你电脑整机（Intel四核J3160 4G 500G 核显 WIFI USB3.0 送键鼠 ）19.5英寸 ','七喜（HEDY） ','Intel','Intel奔腾 赛扬','4G','500G','','18.5-19.5英寸','5aaa131cN604bedd9.jpg');
-insert into Goods values (28,'清华同方（THTF） 真爱',2699,'清华同方（THTF） 真爱S710 台式迷你办公电脑整机原装家用商用主机显示器全套 【热卖】4G/128固态+1T/19.5显示器 ','清华同方（THTF） ','','','4G','','','18.5-19.5英寸','5b459bd6N343e561b.png');
-insert into Goods values (29,'戴尔（DELL） OptiPlex7050MT',7099,'戴尔（DELL） OptiPlex7050MT商用台式电脑主机 i7高配定制版 电脑整机 配23英寸显示器-E2316H i7-7700 16G1T+128G固态 4G独显 ',' 戴尔（DELL） ','Intel ','Intel i7','4G','','','','5a3745b9Nfed5ebd5.jpg');
-insert into Goods values (30,'博仑帅（BOLUNSHUAI',1468,'博仑帅（BOLUNSHUAI） 18.5-27英寸一体机电脑办公家用游戏台式主机整机 高速办公）18.5英寸酷睿i3 4G/64G固态 ',' 博仑帅（BOLUNSHUAI）','Intel ','Intel i3','4G','','','19.5英寸及以下','5b519c26N022e8587.jpg');
-insert into Goods values (31,'苹果（Apple） iMac 21.',7618,'苹果（Apple） iMac 21.5英寸一体机 台式电脑 新款/双核I5/8GB/1TB/MMQA2CH/A ','苹果（Apple） ','','','','','','21.5英寸','5b43f269N75f44475.jpg');
-insert into Goods values (32,'AppleMNE92CH/A',12688,'Apple iMac 27英寸一体机（2017款四核Core i5/8GB内存/1TB Fusion Drive/RP570显卡/5K屏 MNE92CH/A） ','Apple ','Intel ','Intel i5','8G','1T','','27英寸及以上','5a694954Nb38893a3.jpg');
-insert into Goods values (33,'神舟（HASEE） 新梦K80 ',3899,'神舟（HASEE） 新梦K80 D2台式机（I5 4G 1TB 2G 21.5英寸液晶） ','神舟（HASEE） ','','','4G','1T','','21.5英寸','56f8fbebN8caaec73.jpg');
-insert into Goods values (34,'华硕（ASUS） 台式机电',3699,'华硕（ASUS） 台式机电脑S340MC办公家用商务团购无线wifi学生游戏电脑整机 高配8G/1T+256G定制【21.5显示器】 ','华硕（ASUS） ','','','8G','','','','5b20f41eNd56a5b75.jpg');
+insert into Goods values (23,
+  'HP Notebook',
+  1179.0,
+  'Newest HP Notebook, 15.6" Full HD Touchscreen, Intel Core i7-1165G7, Backlit Keyboard, Fingerprint Reader, Webcam, WiFi 5, HDMI, Type-C, Bluetooth, Windows 11 Home, Silver (64GB RAM | 1TB PCIe SSD)',
+  'HP',
+  'AMD',
+  'Intel Core i7',
+  '64 GB',
+  '128 GB',
+  '2.8 GHz',
+  '15.6 Inches',
+  'https://images-na.ssl-images-amazon.com/images/I/61gUUDRMHTL.__AC_SX300_SY300_QL70_ML2_.jpg');
+insert into Goods values (24,
+  'ENVY 17t-cg',
+  1049.0,
+  'HP Envy 17t-cg 17.3" Touch Full HD IPS Laptop (Intel i7-1165G7 4-Core, 16GB RAM, 256GB PCIe SSD + 1TB HDD, Intel Iris Xe, Backlit KB, Fingerprint, WiFi 6, Bluetooth 5.2, Win 11 Home) with Hub',
+  'HP',
+  'AMD',
+  '16 GB',
+  'Windows 11 Home',
+  'Core i7',
+  '2.8 GHz',
+  '17.3 Inches',
+  'https://images-na.ssl-images-amazon.com/images/I/61aZHKRSqhL.__AC_SY300_SX300_QL70_ML2_.jpg');
