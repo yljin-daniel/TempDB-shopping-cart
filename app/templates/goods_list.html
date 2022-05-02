@@ -7,21 +7,18 @@
 		border-collapse: collapse;
 	}
 
-	/*商品列表第1列*/
 	.col1 {
 		padding-top: 5px;
 		border-top: 1px dashed #666666;
 		text-indent: 40px
 	}
 
-	/*商品列表第2列*/
 	.col2 {
 		padding-top: 5px;
 		border-top: 1px dashed #666666;
 		text-align: right;
 	}
 
-	/*商品列表第3列*/
 	.col3 {
 		padding-top: 5px;
 		border-top: 1px dashed #666666;
@@ -37,7 +34,7 @@
     </tr>
 </table>
 <hr width="100%"/>
-<div class="text3" align="center">请从商品列表中选择您喜爱的商品</div>
+<div class="text3" align="center">Pick your favorite from the list!</div>
 
 <form name="input" action="/newList" method="POST">
 	Price Filter: Prices lower than <input type="int" name="user">
@@ -48,15 +45,15 @@
 <br>
 <table width="100%" border="0" align="center">
     <tr bgcolor="#b4c8ed">	
-        <th>商品名称</th>
-        <th width="5%">商品价格</th>
-        <th width="15%">添加到购物车</th>
+        <th>Item</th>
+        <th width="5%">Price</th>
+        <th width="15%">Add to your Shopping Cart</th>
     </tr>
   {% for goods in list %}
     <tr bgcolor={{ loop.cycle('#ffffff', '#edf8ff') }}>
         <td class="col1"><a href="/detail?id={{ goods.id }}">{{ goods.description }}</a></td>
         <td class="col2">￥{{ goods.price}}</td>
-        <td class="col3"><a href="/add?id={{ goods.id }}&name={{ goods.name }}&price={{ goods.price }}">添加到购物车</a></td>
+        <td class="col3"><a href="/add?id={{ goods.id }}&name={{ goods.name }}&price={{ goods.price }}">Add</a></td>
     </tr>
   {% endfor %}
 </table>
