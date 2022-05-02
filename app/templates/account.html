@@ -1,0 +1,100 @@
+{% extends "base2.html" %}
+{% block title %}Cart{% endblock %}
+{% block body %}
+<style type="text/css">
+       table {
+            border-collapse: collapse;
+        }
+
+        .threeboder {
+            border: 1px solid #5B96D0;
+        }
+
+        .trow {
+            border-right: 1px solid #5B96D0;
+            border-bottom: 1px solid #5A96D6;
+        }
+
+        .theader {
+            background-color: #A5D3FF;
+            font-size: 14px;
+            border-right: 1px solid #5B96D0;
+            border-bottom: 1px solid #5A96D6;
+        }
+
+
+</style>
+
+<script>
+        function calc(rowid, quantityInput) {
+
+            quantity = quantityInput.value
+            if (isNaN(quantity)) {
+                alert("不是有效的数值！");
+                quantityInput.value = 0;
+                quantity = quantityInput.value
+                quantityInput.focus();
+                // return;
+            }
+            // 单价id
+            var price_id = 'price_' + rowid;
+            // 单价
+            var price = parseFloat(document.getElementById(price_id).innerText);
+
+            // 小计id
+            var subtotal_id = 'subtotal_' + rowid;
+            // 小计(更新之前)
+            subtotal1 = parseFloat(document.getElementById(subtotal_id).innerText);
+            //四舍五入并保留两位小数
+            subtotal1 = subtotal1.toFixed(2);
+            document.getElementById(subtotal_id).innerText = quantity * price;
+            // 小计(更新之后)
+            subtotal2 = parseFloat(document.getElementById(subtotal_id).innerText);
+            // 合计
+            total = parseFloat(document.getElementById('total').innerText);
+            // 计算合计
+            total = total - subtotal1 + subtotal2;
+            //四舍五入并保留两位小数
+            total = total.toFixed(2);
+            //更新合计
+            document.getElementById('total').innerText = total;
+
+        }
+
+
+</script>
+
+
+<table width="100%" border="0" align="center">
+    <tr>
+        My Account
+    </tr>
+</table>
+<hr width="100%"/>
+<tr>
+    <div class="text3" align="center">Personal Information</div>
+    User Name: {{nm}}
+</tr><HR>
+
+<div class="text3" align="center">Purchase Infermation</div>
+<br>
+
+{% for i in od %}
+    <tr  }}>
+        Order ID: <td class="col1">{{ i.id}}</td></br>
+        {%if i.status == 1%}
+        Order Status: <td class="col2">Paid</td></br>
+        {%else%}
+        Order Status: <td class="col2">Unpaid</td></br>
+        {%endif%}
+        Total Price: $<td class="col1">{{ i.total}}</td></br>
+        {% for j in i.OrderLineItem %}</br>
+        Product ID: <td class="col1">{{ j.id}}</td></br>
+        Product name: <td class="col2">{{ j.goods.name}}</td></br>  
+        Quantity: <td class="col3">{{ j.quantity}}</td>
+        <td class="col4">{{ i.order_date }}</td></br>
+        {% endfor %}</br></br>
+        <HR>
+    </tr>
+{% endfor %}
+{% endblock %}
