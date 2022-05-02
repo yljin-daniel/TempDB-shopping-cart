@@ -35,6 +35,7 @@ class Goods(Base):
 class Orders(Base):
     __tablename__ = 'orders'
     id = Column('id', String(20), primary_key=True)
+    user_name = Column('user_name', String(20))
     orderdate = Column('order_date', String(20))
     status = Column('status', Integer)  
     total = Column('total', Float)

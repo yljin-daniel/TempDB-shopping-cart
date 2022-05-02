@@ -1,3 +1,5 @@
+from ast import For
+from cgi import print_exception
 from flask import Flask, request, session, render_template, redirect, url_for, flash
 from flask_sqlalchemy import SQLAlchemy
 from app.forms import CustomerRegForm, LoginForm
@@ -6,15 +8,10 @@ import config
 import random
 import datetime
 
-# import sqlite3
-# con = sqlite3.connect('C:/Users/kingd/Downloads/code_Flask/code/19.OnlineCart/computer_store/db/database.db')
-# cur = con.cursor()
-
 app = Flask(__name__)
 app.config.from_object(config)
 db = SQLAlchemy(app)
-
-
+currentOrder = 2
 
 @app.route('/reg', methods=['GET', 'POST'])
 def register():
@@ -66,6 +63,17 @@ def login():
                 return render_template('login.html', form=form)
     return render_template('login.html', form=form)
 
+@app.route('/account', methods=['GET', 'POST'])
+def show_account():
+    dt = session['customer']['name']
+    c = db.session.query(Orders).filter_by(user_name =session['customer']['name'])
+    msg = []
+    for i in c:
+        msg.append(i.id)
+        # msg += "\n order.id:" + str(i.id)
+    # print("!!!!!!!!!!!")
+    # print(msg)
+    return render_template('account.html', nm = dt, od = c)
 
 @app.route('/main')
 def main():
@@ -78,17 +86,27 @@ def main():
 @app.route('/list')
 def show_goods_list():
     if 'customer' not in session.keys():
-        flash('Please Login.')
+        flash('Please Login')
         return redirect(url_for('login'))
 
     goodslist = db.session.query(Goods).all()
     return render_template('goods_list.html', list=goodslist)
 
+@app.route('/newList', methods=['GET', 'POST'])
+def show_goods_list_new():
+    if 'customer' not in session.keys():
+        flash('Please Login')
+        return redirect(url_for('login'))
+    ft = 999999999
+    if request.method == 'POST':
+        ft = request.form.get('user')
+    goodslist = db.session.query(Goods).filter(Goods.price<ft).all()
+    return render_template('goods_list.html', list=goodslist)
 
 @app.route('/detail')
 def show_goods_detail():
     if 'customer' not in session.keys():
-        flash('Please Login.')
+        flash('Please Login')
         return redirect(url_for('login'))
 
     goodsid = request.args['id']
@@ -100,19 +118,17 @@ def show_goods_detail():
 @app.route('/add')
 def add_cart():
     if 'customer' not in session.keys():
-        flash('Please Login.')
+        flash('Pleases Login')
         return redirect(url_for('login'))
 
     goodsid = int(request.args['id'])
     goodsname = request.args['name']
     goodsprice = float(request.args['price'])
 
-    # check if cart has been created in this Session
     if 'cart' not in session.keys():
-        session['cart'] = []  
+        session['cart'] = []
 
     cart = session['cart']
-    # 0 item not in cart ,1 item already in cart
     flag = 0
     for item in cart:
         if item[0] == goodsid:  # goods id
@@ -132,10 +148,11 @@ def add_cart():
     return redirect(url_for('show_goods_list'))
 
 
+
 @app.route('/cart')
 def show_cart():
     if 'customer' not in session.keys():
-        flash('Please Login.')
+        flash('Please Login')
         return redirect(url_for('login'))
 
     if 'cart' not in session.keys():
@@ -152,19 +169,19 @@ def show_cart():
 
     return render_template('cart.html', list=list, total=total)
 
-
-
-@app.route('/submit_order', methods=['POST'])
+app.route('/submit_order', methods=['POST'])
 def submit_order():
     orders = Orders()
-    # Order id is pruduced by time stamp and one random digit
+    # Order id is produced by time stamp and one random digit
     n = random.randint(0, 9)
     d = datetime.datetime.today()
     orderid = str(int(d.timestamp() * 1e6)) + str(n)
     orders.id = orderid
+    orders.user_name = session['customer']['name']
     orders.orderdate = d.strftime('%Y-%m-%d %H:%M:%S')
     orders.status = 1  # 1 Unpaid 0 Paid
-
+    currentOrder = orderid
+    print("This is order ID!" + currentOrder)
     db.session.add(orders)
     cart = session['cart']
     total = 0.0
@@ -174,7 +191,6 @@ def submit_order():
             quantity = int(quantity)
         except:
             quantity = 0
-
         subtotal = item[2] * quantity
         total += subtotal
 

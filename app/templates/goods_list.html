@@ -34,10 +34,17 @@
     </tr>
 </table>
 <hr width="100%"/>
-<div class="text3" align="center">Pick your favorites from the list!</div>
+<div class="text3" align="center">Pick your favorite from the list!</div>
+
+<form name="input" action="/newList" method="POST">
+	Price Filter: Prices lower than <input type="int" name="user">
+	<input type="submit" value="Submit">
+	</form>
+
+
 <br>
 <table width="100%" border="0" align="center">
-    <tr bgcolor="#b4c8ed">
+    <tr bgcolor="#b4c8ed">	
         <th>Item</th>
         <th width="5%">Price</th>
         <th width="15%">Add to your Shopping Cart</th>

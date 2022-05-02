@@ -1,0 +1,60 @@
+{% extends "base2.html" %}
+{% block title %}Cart{% endblock %}
+{% block body %}
+<style type="text/css">
+       table {
+            border-collapse: collapse;
+        }
+
+        .threeboder {
+            border: 1px solid #5B96D0;
+        }
+
+        .trow {
+            border-right: 1px solid #5B96D0;
+            border-bottom: 1px solid #5A96D6;
+        }
+
+        .theader {
+            background-color: #A5D3FF;
+            font-size: 14px;
+            border-right: 1px solid #5B96D0;
+            border-bottom: 1px solid #5A96D6;
+        }
+
+
+</style>
+
+<table width="100%" border="0" align="center">
+    <tr>
+        My Account
+    </tr>
+</table>
+<hr width="100%"/>
+<tr>
+    <div class="text3" align="center">Personal Information</div>
+    User Name: {{nm}}
+</tr><HR>
+
+<div class="text3" align="center">Purchase Infermation</div>
+<br>
+
+{% for i in od %}
+    <tr  }}>
+        Order ID: <td class="col1">{{ i.id}}</td></br>
+        {%if i.status == 1%}
+        Order Status: <td class="col2">Unpaid</td></br>
+        {%else%}
+        Order Status: <td class="col2">Paid</td></br>
+        {%endif%}
+        Total Price: $<td class="col1">{{ i.total}}</td></br>
+        {% for j in i.OrderLineItem %}</br>
+        Product ID: <td class="col1">{{ j.id}}</td></br>
+        Product name: <td class="col2">{{ j.goods.name}}</td></br>  
+        Quantity: <td class="col3">{{ j.quantity}}</td>
+        <td class="col4">{{ i.order_date }}</td></br>
+        {% endfor %}</br></br>
+        <HR>
+    </tr>
+{% endfor %}
+{% endblock %}
