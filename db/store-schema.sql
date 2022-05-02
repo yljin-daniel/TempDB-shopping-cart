@@ -41,7 +41,8 @@ create table Orders
    id                   varchar(20) primary key,
    order_date           varchar(20),
    status               integer default 1,
-   total                float
+   total                float,
+   user_name            varchar(100)
 );
 
 
@@ -53,3 +54,11 @@ create table OrderLineItems
    quantity             integer,
    sub_total            float
 );
+
+drop index if exists goods_price_index;
+
+drop index if exists orders_user_name_index;
+
+create index goods_price_index on Goods (price);
+
+create index orders_user_name_index on Orders (user_name);
