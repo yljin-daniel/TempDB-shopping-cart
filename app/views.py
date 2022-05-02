@@ -169,7 +169,7 @@ def show_cart():
 
     return render_template('cart.html', list=list, total=total)
 
-app.route('/submit_order', methods=['POST'])
+@app.route('/submit_order', methods=['POST'])
 def submit_order():
     orders = Orders()
     # Order id is produced by time stamp and one random digit
