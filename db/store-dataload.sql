@@ -1,25 +1,179 @@
-insert into Goods values (1,'戴尔(DELL)成就3470高性能商用办公台式电脑整机',3399,'戴尔(DELL)成就3470高性能商用办公台式电脑整机(八代i3-8100 8G 1T 四年上门 有线键鼠 FHD宽屏)21.5英寸 ','','','','','','','','5ae00211N25afad2c.jpg');
-insert into Goods values (2,'酷耶（Cooyes） i5四核/GTX1050ti独显4G/台式机',2499,'酷耶（Cooyes） i5四核/GTX1050ti独显4G/台式机电脑主机整机全套组装家用办公游戏 GTX750独显主机+23英寸显示器 ',' 酷耶（Cooyes）','Intel ','Intel i5','4G','','GTX 9系/7系','23-24英寸','5b1a332dN83700a7c.jpg');
-insert into Goods values (3,'联想天逸510S',3099,'联想（Lenovo）天逸510S商用台式办公电脑整机（i3-7100 4G 1T 集显 WiFi 蓝牙 三年上门 win10）19.5英寸','联想（Lenovo）','Intel ','Intel i3','4G','1T','集成显卡','','5a6e946eNd622e938.jpg');
-insert into Goods values (4,'戴尔Vostro 3668-R2938',6699,'戴尔(DELL)成就3668商用办公台式电脑整机(i7-7700 8G 1T GTX745 4G独显 DVD 三年上门 硬盘保留)23英寸 ','戴尔（DELL） ','Intel ','Intel i7','8G','1T','','23-24英寸','5ac482c0Nfbfc2b4e.jpg');
-insert into Goods values (5,'联想天逸510 Pro',4899,'联想（Lenovo）天逸510 Pro商用台式电脑整机（英特尔八代酷睿i5-8400 8G 1T GT730 2G独显 ）23英寸 ','联想（Lenovo） ','Intel','Intel i5','8G','1T','','23-24英寸','5b0fd9dbNeadc1b8d.jpg');
+insert into Goods values (1,
+  'GF63',
+  949.0,
+  '2022 Newest MSI GF63 Gaming Laptop, 15.6" Full HD Display, Intel Core i5-10500H Processor, 16GB RAM, 1TB SSD, NVIDIA GeForce GTX 1650 Graphics, Backlit Keyboard, Wi-Fi 6, Windows 11 Home',
+  'MSI',
+  'Intel',
+  'Core i5',
+  '16 GB',
+  '1 TB',
+  'NVIDIA GeForce GTX 1650 Max-Q',
+  '15.6 Inches',
+  'https://images-na.ssl-images-amazon.com/images/I/713i9oxw4lL.__AC_SY300_SX300_QL70_ML2_.jpg');
+insert into Goods values (2,
+  'NP8872P',
+  1799.0,
+  '2022 Sager NP8872P Gaming Laptop, 17.3 Inch QHD 165Hz 100% DCI-P3, Intel i7-12700H, RTX 3060, 32GB RAM, 1TB Gen4 NVMe SSD, TBT 4, Win 11',
+  'Sager',
+  'AMD',
+  '32 GB',
+  'Windows 11 Home',
+  'Core i7',
+  'SSD',
+  '17.3 Inches',
+  'https://images-na.ssl-images-amazon.com/images/I/71mgkNeb56L.__AC_SX300_SY300_QL70_ML2_.jpg');
+insert into Goods values (3,
+  '2022 Newest 15.6 Inch ASUS VivoBook',
+  449.0,
+  '2022 Newest ASUS VivoBook 15.6" HD Business Thin Laptop, Intel 10th Gen i3-1005G1 (Upto 3.4GHz, Beat i5-8250U), 12GB RAM, 256GB PCIe SSD, HD Graphic, Bluetooth,HD Webcam,Win 11 Home +MarxsolCables',
+  'ASUS',
+  'Intel',
+  'Core i3 Family',
+  '12 GB',
+  '256 GB',
+  'Intel HD Graphics 5000',
+  '15.6 Inches',
+  'https://images-na.ssl-images-amazon.com/images/I/81Oi9a4ZH9L.__AC_SY300_SX300_QL70_ML2_.jpg');
+insert into Goods values (4,
+  'ASUS Rog Strix',
+  2959.99,
+  'CUK ROG Strix Scar 15 Inch Gaming Notebook (AMD Ryzen 9 5900HX, 64GB RAM, 2X2TB NVMe SSD, NVIDIA GeForce RTX 3080 8GB, 15.6" FHD 300Hz 3ms IPS, Windows 10 Home) Gamer Laptop Computer (Made_by_ASUS)',
+  'Computer Upgrade King',
+  'AMD',
+  'AMD R Series',
+  '32 GB',
+  '4000 GB',
+  'NVIDIA GeForce RTX 3080',
+  '15.6 Inches',
+  'https://images-na.ssl-images-amazon.com/images/I/31ozoG3n2rS.__AC_SY300_SX300_QL70_ML2_.jpg');
+insert into Goods values (5,
+  'Strix G15',
+  1799.99,
+  '2021 Newest ASUS ROG Strix G15 Gaming Laptop,15.6” 144Hz IPS Type FHD, 10th Gen Intel Core i7-10750H, GeForce RTX 2070, 32GB DDR4 RAM, 1TB PCIe NVMe SSD, RGB KB, Windows 10 Pro + Oydisen Cloth',
+  'ASUS',
+  'Intel',
+  'Core i7',
+  '32 GB',
+  '1 TB',
+  'GeForce RTX 2070',
+  '15.6 Inches',
+  'https://images-na.ssl-images-amazon.com/images/I/61LxsrqX69S.__AC_SY300_SX300_QL70_ML2_.jpg');
 insert into Goods values (6,'宏碁SQX4650 140N',2099,'宏碁(Acer) 商祺SQX4650 140N 台式商用电脑整机（G3930 4G 1T 集显 win10 键鼠 三年上门）19.5英寸 ','宏碁（acer） ','Intel','Intel奔腾 赛扬','4G','1T','','18.5-19.5英寸','5b0fd9dbNeadc1b8d.jpg');
-insert into Goods values (7,'狄派 4G独显/绝地求生',1999,'狄派 4G独显/绝地求生吃鸡台式机电脑酷睿i5-8400/i7级六核办公游戏电脑主机四核台式整机全套 电脑主机+显示器 套餐二（双核+500G机械盘+4G独显）','狄派 ','AMD','AMD','8G','500G','AMD芯片','23-24英寸','5b36109aNe26f1c28.jpg');
+insert into Goods values (7,
+  'Pavilion-14m-1013d',
+  569.0,
+  'HP Newest Pavilion x360 Convertible Laptop: 14In HD Anti-Glare Touchscreen, Latest Intel i3-1115G4(Upto 4.1GHz), Intel UHD Graphics, WiFi, USB-C, HDMI, TF, Hpav-14m1013dx, Silver, 8GB RAM | 256GB SSD',
+  'HP',
+  'Intel',
+  'Intel Core i3',
+  '8 GB',
+  '256 GB',
+  'Intel',
+  '14 Inches',
+  'https://images-na.ssl-images-amazon.com/images/I/811dtC6rQrL.__AC_SY300_SX300_QL70_ML2_.jpg');
 insert into Goods values (8,'海尔天越Y3',1888,'海尔（Haier）天越Y3 商用台式办公电脑整机(Intel四核J3160 4G 500G 键鼠 WIFI 正版Win10)20.7英寸','海尔（Haier） ','Intel','Intel奔腾 赛扬','4G','','','20-20.7英寸','5b31a164Nb58f4bee.jpg');
 insert into Goods values (9,'清华同方精锐S710',2099,'清华同方(THTF)精锐S710商用办公电脑整机(八代G4900 4G 1T 内置wifi win10）19.5英寸','清华同方（THTF） ','Intel','Intel奔腾 赛扬','4G','1T','','18.5-19.5英寸','5b431c4bN240eba11.jpg');
 insert into Goods values (10,'惠普690-076ccn',6488,'惠普（HP）光影精灵II代 吃鸡游戏台式电脑主机(八代i7-8700 高频8G 128GSSD+1TB GTX1060 6G独显 WiFi蓝牙) ','惠普（HP） ','Intel ','Intel i7','8G','','GTX1060 3G/6G','','5ae14568N12a4a954.jpg');
-insert into Goods values (11,'佐瀚（zuohan） AMD双',769,'佐瀚（zuohan） AMD双/四核/4G独显/台式电脑主机家用办公游戏电脑整机 ADM 双核/4G/500G-办公家用型 ','佐瀚（zuohan） ','AMD','AMD','4G','','','','5aa0831bN8b987edd.jpg');
-insert into Goods values (12,'联想扬天M4000e (PLUS)',5599,'联想（Lenovo）扬天M4000e(PLUS)商用台式电脑整机(I5-7400 8G 1T+128GSSD 1G独显WIN10 4年上门)21.5英寸','联想（Lenovo） ','Intel ','Intel i5','8G','','','21.5英寸','5af2b6d4Nf39e88c3.jpg');
-insert into Goods values (13,'戴尔Vostro 3470-R1328R',3399,'戴尔(DELL)成就3470高性能商用办公台式电脑整机(八代i3-8100 8G 1T 四年上门 有线键鼠 FHD宽屏)21.5英寸 ','戴尔（DELL） ','Intel ','Intel i3','8G','1T','','21.5英寸','5ae00211N25afad2c.jpg');
+insert into Goods values (11,
+  'Dell G15 5515 RE Gaming Laptop',
+  1019.0,
+  'Dell G15 5515 RE Gaming 15 Laptop I 15.6" Full HD 120Hz Display I AMD 6-Core Ryzen 5 5600H (>i7-10750H) I 8GB DDR4 256GB SSD + 512GB SSD I GeForce RTX 3050 4GB Graphic I Backlit USB-C HDMI Win10Pro',
+  'Dell',
+  'AMD',
+  'AMD R Series',
+  '8 GB',
+  '256 GB',
+  'Dedicated NVIDIA GeForce RTX 3050 4GB',
+  '15.6 Inches',
+  'https://images-na.ssl-images-amazon.com/images/I/81cyFDQWSHL.__AC_SX300_SY300_QL70_ML2_.jpg');
+insert into Goods values (12,
+  'Core i7',
+  1084.99,
+  ' MSI Sword Gaming Laptop, 15.6" FHD IPS 144Hz Display, Latest Gen Core i7-11800H (Beat i9-10980HK), GeForce RTX 3050 Ti 4GB, 16GB 3200MHz RAM, 512GB PCIe SSD, USB-C, HDMI, RJ45, WiFi 6, Backlit, Win 10',
+  'MSI',
+  'AMD',
+  'GeForce RTX 3050 Ti',
+  'White',
+  'Dell Precision',
+  '1920 x 1080',
+  '16 GB',
+  'https://m.media-amazon.com/images/I/61R+ttqF7sL._AC_SY300_SX300_.jpg');
+insert into Goods values (13,
+  'Dell Precision',
+  382.0,
+  '2022 Newest Lenovo Ideapad3 Premium Laptop: 15.6" FHD Display, 4-Core Intel Pentium N5030, 4GB RAM, 128GB SSD, 1-Year Office 365 Personal, UHD Graphics, WiFi, Bluetooth, DolbyAudio, Win11S, TF',
+  'Lenovo',
+  'Intel',
+  'Pentium',
+  '4 GB',
+  '128 GB',
+  'Intel',
+  '15.6 Inches',
+  'https://images-na.ssl-images-amazon.com/images/I/61wYw4cc3sL.__AC_SX300_SY300_QL70_ML2_.jpg');
 insert into Goods values (14,'戴尔Inspiron 3670-R1847S',5299,'戴尔(DELL)灵越3670高性能台式电脑整机(八代i5-8400 8G 1T 2G独显 Win10 有线键鼠 三年上门)23.6英寸 ','戴尔（DELL） ','Intel ','Intel i5','8G','1T','','23-24英寸','5ae0031cN51fcf335.jpg');
 insert into Goods values (15,'亚当贝尔 酷睿i5-8400/i7',1650,'亚当贝尔 酷睿i5-8400/i7独显GTX1060家用商务办公游戏吃鸡台式电脑主机整机全 单主机 套餐一（酷睿I5+8G+GTX750独显） ','亚当贝尔 ','Intel ','Intel i5','8G','','GTX 9系/7系','','57d3998bNed48e1f1.jpg');
-insert into Goods values (16,'外星人AuroraR7-R3948S',22699,'外星人Alienware Aurora水冷游戏台式电脑主机(八代i7-8700K 16G 256GSSD+2T GTX1080Ti 11G独显) ','外星人（Alienware） ','Intel ','Intel i7','16G','','1080TI 11G/GTX1080 8G','','5b5a8c43Nf234ed02.jpg');
-insert into Goods values (17,'宏碁SQX4650 340N',2499,'宏碁(Acer) 商祺SQX4650 340N 台式商用电脑整机（G4560 4G 1T 集显 win10 Wifi 键鼠 三年上门）19.5英寸 ',' 宏碁（acer） ','Intel','Intel奔腾 赛扬','4G','1T','','18.5-19.5英寸','5a672a4eNc8467acf.jpg');
+insert into Goods values (16,
+  'ASUS Rog Strix',
+  3199.99,
+  'CUK ROG Strix Scar 17 Gamer Notebook (Intel i9-12900H, 32GB RAM, 2TB NVMe SSD, NVIDIA GeForce RTX 3070 Ti 8GB, 17.3" FHD 360Hz 3ms IPS, Windows 11 Home) 17 Inch Gaming Laptop Computer (Made_by_ASUS)',
+  'Computer Upgrade King',
+  'AMD',
+  '64 GB',
+  'Windows 11 Home x64-bit',
+  'Core i9',
+  '2.5 GHz',
+  '17.3 Inches',
+  'https://images-na.ssl-images-amazon.com/images/I/611JIsdbbWL.__AC_SY300_SX300_QL70_ML2_.jpg');
+insert into Goods values (17,
+  'M15R6',
+  2599.0,
+  'Latest_Alien.Ware m15 R6 15.6" QHD 240Hz G-SYNC Gaming Laptop PC, Intel 11th Gen i7-11800H (up to 4.6Ghz), GeForce RTX 3080, 32GB RAM 1TB SSD, WiFi HDMI, Windows 11, 1-W Shoxlab Support',
+  'SHOXLAB',
+  'Intel',
+  'Intel Core i7',
+  '32 GB',
+  '1 TB',
+  'NVIDIA GeForce RTX 3080',
+  '15.6 Inches',
+  'https://images-na.ssl-images-amazon.com/images/I/71w5kipQpgL.__AC_SX300_SY300_QL70_ML2_.jpg');
 insert into Goods values (18,'机械革命MR LX900-600',9999,'机械革命(MECHREVO)MR LX900吃鸡游戏台式电脑主机(i7-8700K 16G 128GSSD+1T GTX1070*8G独显） ','机械革命（MECHREVO）','Intel ','Intel i7','16G','','','GTX1070 8G','5b03e639N695b29a5.jpg');
 insert into Goods values (19,'亚当贝尔 四核/酷睿I5/i7级六核独显',1399,'亚当贝尔 四核/酷睿I5/i7级六核独显GTX1060可选家用办公游戏吃鸡台式机电脑主机 电脑主机+19英寸显示器 配置一 英特尔四核+4G内存+128固态 ','亚当贝尔 ','Intel','Intel奔腾 赛扬','4G','','','18.5-19.5英寸','58c8fd52N19cbf7dd.jpg');
-insert into Goods values (20,'玖嘉久 酷睿i5/I7/六核1050TI',2780,' 玖嘉久 酷睿i5/I7/六核1050TI独显家用商务办公吃鸡大型游戏台式机电脑主机整机 电脑主机+24英寸曲面显示器(整套全套) 套餐三（酷睿i5+4G独显+固态+500G双硬盘） ','玖嘉久 ','Intel ','Intel i5','8G','','','23-24英寸','5aa64e06N4287db6f.jpg');
-insert into Goods values (21,'宏硕（hongshuo） i7四',2599,'宏硕（hongshuo） i7四核/GTX1050Ti 4G独显/台式机电脑整机办公游戏吃鸡电脑主机 套餐一（酷睿i5/120G/GTX750Ti）吃鸡 主机+显示器','宏硕（hongshuo） ','Intel ','Intel i5','8G','','GTX 9系/7系','23-24英寸','5b3984c1N261bafef.jpg');
-insert into Goods values (22,'酷耶（Cooyes） 酷耶 i5',4398,'酷耶（Cooyes） 酷耶 i5 8400六核/16G/GTX1060独显台式机电脑主机家用吃鸡游戏 主机+24英寸曲面显示器 8G内存/120G/GTX1050独显2G ','酷耶（Cooyes） ','Intel ','Intel i5','16G','','GTX1050Ti 4G/ GTX1050 2G','23-24英寸','5ae2fd44Nd496df02.jpg');
+insert into Goods values (20,
+  'Omen 15z',
+  1969.99,
+  'CUK Omen 15z Gamer Laptop (AMD Ryzen 7, NVIDIA GeForce RTX 3070 8GB, 32GB RAM, 2TB NVMe SSD, 15.6" QHD 165Hz IPS, Windows 10 Home) 15 Inch Gaming Notebook Computer (Made_by_HP)',
+  'Computer Upgrade King',
+  'AMD',
+  'AMD R Series',
+  '32 GB',
+  '2000 GB',
+  'NVIDIA GeForce RTX 3070',
+  '15.6 Inches',
+  'https://images-na.ssl-images-amazon.com/images/I/71ZA7Vge2EL.__AC_SY300_SX300_QL70_ML2_.jpg');
+insert into Goods values ((21,
+  'Dell G15 Ryzen 7 3050Ti 120Hz',
+  1049.0,
+  'Dell G15 Ryzen Edition 15 Gaming Laptop I 15.6" Full HD 120Hz I AMD 8-Core Ryzen 7 5800H (>i7-10750H) I 8GB DDR4 512GB SSD I GeForce RTX 3050 Ti 4GB Graphic I HDMI USB-C Backlit Keyboard Win11Pro',
+  'Dell',
+  'AMD',
+  'AMD R Series',
+  '8 GB',
+  '512 GB',
+  'Dedicated NVIDIA GeForce RTX 3050 Ti 4GB',
+  '15.6 Inches',
+  'https://images-na.ssl-images-amazon.com/images/I/719aVE4SYDL.__AC_SX300_SY300_QL70_ML2_.jpg');
+insert into Goods values (22,
+  'GT Book',
+  379.99,
+  'Windows 11 Laptop 14-inch, ALLDOCUBE GT Book, Intel 11st-gen JasperLake N5100, Quad Core, 12GB RAM, 256GB SSD, 14" FHD IPS Display, WiFi 6, Bluetooth 5.1, Type C, with Backlit Keyboard,Space Gray',
+  'ALLDOCUBE',
+  'AMD',
+  'Celeron N',
+  '12 GB',
+  '256 GB',
+  '2.8 Hz',
+  '14 Inches',
+  'https://images-na.ssl-images-amazon.com/images/I/61zSKlPmKsL.__AC_SX300_SY300_QL70_ML2_.jpg');
 insert into Goods values (23,'戴尔（DELL） Optiplex3050MT ',2699,'戴尔（DELL） Optiplex3050MT 办公台式电脑主机 商用台式机办公电脑整机全套 带21.5英寸显示器 E2216HV G3930 4G 500G 标机 ','戴尔（DELL） ','Intel','Intel奔腾 赛扬','4G','500G','','','5b5a85b7Naf67e3e1.jpg');
 insert into Goods values (24,'宏碁SQX4650 746N',4099,'宏碁(Acer) 商祺SQX4650 746N台式商用电脑整机(i5-7400 4G 1T GT720 2G win10 Wifi 键鼠 三年上门)21.5英寸 ',' 宏碁（acer） ','Intel ','Intel i5','4G','1T','GTX 9系/7系','：21.5英寸','5a672fbaN7fdae887.jpg');
 insert into Goods values (25,'梵泰（FOTEN） 英特尔',1399,'梵泰（FOTEN） 英特尔四核办公家用台式电脑整机 主机+21.5显示器 【特价】四核+2G内存+60G固态硬盘 ','梵泰（FOTEN） ','Intel','Intel奔腾 赛扬','','1T','','21.5英寸','5afcf52dN88b989ea.jpg');
