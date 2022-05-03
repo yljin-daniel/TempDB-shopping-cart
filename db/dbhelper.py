@@ -10,9 +10,9 @@ def create_tables():
         conn = sqlite3.connect(DB_FILES)
         try:
             conn.executescript(sql)
-            print('数据库初始化成功')
+            print('Database Initialization Success')
         except Exception as e:
-            print('数据库初始化失败')
+            print('Database Initialization Failed')
             print(e)
         finally:
             conn.close()
@@ -25,9 +25,9 @@ def load_data():
         conn = sqlite3.connect(DB_FILES)
         try:
             conn.executescript(sql)
-            print('数据库插入成功')
+            print('Data Successfully Loaded')
         except Exception as e:
-            print('数据库插入失败')
+            print('Data Loading Failed')
             print(e)
         finally:
             conn.close()

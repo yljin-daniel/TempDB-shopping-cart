@@ -100,10 +100,9 @@ def show_goods_list_new():
         flash('Please Login')
         return redirect(url_for('login'))
     ft = 999999999
-    lt = ft
     if request.method == 'POST':
         ft = request.form.get('user')
-    db.engine.execute('select * from Goods where price in [?, ?]',lt,ft)
+    db.engine.execute('select * from Goods where price < ?',ft)
     goodslist = db.session.query(Goods).filter(Goods.price<ft).all()
     return render_template('goods_list.html', list=goodslist)
 
