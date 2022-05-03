@@ -2,6 +2,8 @@
 
 This is the CS 348 group project for Group TempDB.
 
+Github Link: https://github.com/yljin-daniel/TempDB-shopping-cart
+
 ## How to Run 
 1. Before running server on a new Computer , YOU MUST INITIALIZE THE DATABASE and Load Data as following steps: 
   > <code>python ./manager.py create_tables</code>\
