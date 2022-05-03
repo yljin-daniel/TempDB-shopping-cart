@@ -1,5 +1,6 @@
 from ast import For
 from cgi import print_exception
+from cmath import inf
 from flask import Flask, request, session, render_template, redirect, url_for, flash
 from flask_sqlalchemy import SQLAlchemy
 from app.forms import CustomerRegForm, LoginForm
@@ -46,15 +47,16 @@ def login():
     form = LoginForm(request.form)
     if request.method == 'POST'and form.validate():
             c = db.session.query(Customer).filter_by(id=form.userid.data).first()
-            if c is not None and c.password == form.password.data:
+            c = db.engine.execute('select * from Customers where id= ?', form.userid.data).fetchone()
+            if c is not None and c[2] == form.password.data:
                 print('Login Success')
                 customer = {}
-                customer['id'] = c.id
-                customer['name'] = c.name
-                customer['password'] = c.password
-                customer['address'] = c.address
-                customer['phone'] = c.phone
-                customer['birthday'] = c.birthday
+                customer['id'] = c[0]
+                customer['name'] = c[1]
+                customer['password'] = c[2]
+                customer['address'] = c[3]
+                customer['phone'] = c[4]
+                customer['birthday'] = c[5]
                 session['customer'] = customer
 
                 return redirect(url_for('main'))
@@ -98,8 +100,10 @@ def show_goods_list_new():
         flash('Please Login')
         return redirect(url_for('login'))
     ft = 999999999
+    lt = ft
     if request.method == 'POST':
         ft = request.form.get('user')
+    db.engine.execute('select * from Goods where price in [?, ?]',lt,ft)
     goodslist = db.session.query(Goods).filter(Goods.price<ft).all()
     return render_template('goods_list.html', list=goodslist)
 
