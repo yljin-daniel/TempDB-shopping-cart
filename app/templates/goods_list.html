@@ -52,7 +52,7 @@
   {% for goods in list %}
     <tr bgcolor={{ loop.cycle('#ffffff', '#edf8ff') }}>
         <td class="col1"><a href="/detail?id={{ goods.id }}">{{ goods.description }}</a></td>
-        <td class="col2">￥{{ goods.price}}</td>
+        <td class="col2">${{ goods.price}}</td>
         <td class="col3"><a href="/add?id={{ goods.id }}&name={{ goods.name }}&price={{ goods.price }}">Add</a></td>
     </tr>
   {% endfor %}

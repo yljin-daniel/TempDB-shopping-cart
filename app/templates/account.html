@@ -39,14 +39,15 @@
 <br>
 
 {% for i in od %}
-    <tr  }}>
+    
+    <tr  >
         Order ID: <td class="col1">{{ i.id}}</td></br>
         {%if i.status == 1%}
         Order Status: <td class="col2">Unpaid</td></br>
         {%else%}
         Order Status: <td class="col2">Paid</td></br>
         {%endif%}
-        Total Price: $<td class="col1">{{ i.total}}</td></br>
+        Total Price: $<td class="col1">{{ i.total }}</td></br>
         {% for j in i.OrderLineItem %}</br>
         Product ID: <td class="col1">{{ j.id}}</td></br>
         Product name: <td class="col2">{{ j.goods.name}}</td></br>  

@@ -157,7 +157,7 @@ def show_cart():
 
     if 'cart' not in session.keys():
         return render_template('cart.html', list=[], total=0.0)
-
+    
     cart = session['cart']
     list = []
     total = 0.0

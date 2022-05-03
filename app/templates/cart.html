@@ -43,7 +43,9 @@
             
             subtotal1 = parseFloat(document.getElementById(subtotal_id).innerText);
             subtotal1 = subtotal1.toFixed(2);
-            document.getElementById(subtotal_id).innerText = quantity * price;
+            tempTotal = quantity * price
+            tempTotal = tempTotal.toFixed(2);
+            document.getElementById(subtotal_id).innerText = tempTotal;
         
             subtotal2 = parseFloat(document.getElementById(subtotal_id).innerText);
             
@@ -83,8 +85,8 @@
                 <input name="quantity_{{ item[0] }}" type="text" value="{{ item[3] }}"
                        onblur="calc({{ item[0] }}, this)"/>
             </td>
-            <td align="center" class="trow">&yen;<span id="price_{{ item[0] }}">{{ item[2] }}</span></td>
-            <td align="center" class="trow">&yen;<span id="subtotal_{{ item[0] }}">{{ item[4] }}</span>
+            <td align="center" class="trow">$<span id="price_{{ item[0] }}">{{ item[2] }}</span></td>
+            <td align="center" class="trow">$<span id="subtotal_{{ item[0] }}">{{ item[4] }}</span>
             </td>
         </tr>
         {% endfor %}
@@ -113,8 +115,8 @@
                 <input name="quantity_{{ item[0] }}" type="text" value="{{ item[3] }}"
                        onblur="calc({{ item[0] }}, this)"/>
             </td>
-            <td align="center" class="trow">&yen;<span id="price_{{ item[0] }}">{{ item[2] }}</span></td>
-            <td align="center" class="trow">&yen;<span id="subtotal_{{ item[0] }}">{{ item[4] }}</span>
+            <td align="center" class="trow">$<span id="price_{{ item[0] }}">{{ item[2] }}</span></td>
+            <td align="center" class="trow">$<span id="subtotal_{{ item[0] }}">{{ item[4] }}</span>
             </td>
         </tr>
         {% endfor %}
